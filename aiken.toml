@@ -1,0 +1,18 @@
+name = "apea-aiken-batch-1/testing_debugging"
+version = "0.0.0"
+compiler = "v1.1.5"
+plutus = "v3"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'apea-aiken-batch-1/testing_debugging'"
+
+[repository]
+user = "apea-aiken-batch-1"
+project = "testing_debugging"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "v2.1.0"
+source = "github"
+
+[config]

@@ -22,9 +22,7 @@ test test_fail() fail {
 /// - fail (if it runs 100x, then ALL 100x it must fail) -> PASS
 /// - fail once (not ALL fail) -> PASS
 test increment_property_test(
-  ls: List<Int> via fuzz.list_between(fuzz.int(), 2, 2),
+  (n, step) via fuzz.both(fuzz.int(), fuzz.option(fuzz.int())),
 ) fail once {
-  expect [n, step] = ls
-
-  increment(n, Some(step)) > n
+  increment(n, step) > n
 }
